@@ -14,14 +14,12 @@ public class FacebookLogin {
 		driver.get("https://www.facebook.com/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		WebElement ele = driver.findElement(By.id("email"));
-		if(ele.isDisplayed()) {
-			System.out.print("Pass");
-			ele.sendKeys("palankit35@gmail.com");
-		}else {
-			System.out.println("Fail");
-		}
-		driver.close();
+		
+		WebElement ele = driver.findElement(By.xpath("//button[name()='login']"));
+		driver.findElement(By.xpath("//a[@title='English (UK)']").click();
+		
+
+		driver.close();	
 	}
 
 }
